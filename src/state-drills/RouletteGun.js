@@ -1,14 +1,15 @@
 import React from 'react';
 
 class RouletteGun extends React.Component {
-   static defaultProps = {
+   static defaultProps = { //channel to pass data between components
        bulletInChamber: 8,
    }
 
-    state = {
+    state = { //value that a component can hold
       chamber: null,
       spinningTheChamber: false,
     }
+
     handleClick = () => {
         // State is updated using setState
         this.setState({
@@ -45,7 +46,7 @@ componentWillUnmount(){
       }
 }
    
- render() {
+render() {
     return (<div>
 
     <p>{this.takeChance()}</p>
